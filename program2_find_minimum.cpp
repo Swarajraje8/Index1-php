@@ -6,6 +6,10 @@ int main() {
     int rows, cols;
     std::cout << "Enter number of rows and columns: ";
     std::cin >> rows >> cols;
+    if (rows <= 0 || cols <= 0) {
+        std::cout << "Invalid matrix dimensions.\n";
+        return 1;
+    }
 
     std::vector<std::vector<int>> matrix(rows, std::vector<int>(cols));
     int minimum = std::numeric_limits<int>::max();
